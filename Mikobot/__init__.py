@@ -59,11 +59,11 @@ ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
     # Read configuration from environment variables
-    API_ID = int(os.environ.get("API_ID", None))
-    API_HASH = os.environ.get("API_HASH", None)
+    API_ID = int(os.environ.get("API_ID", "23217599"))
+    API_HASH = os.environ.get("API_HASH", "d3113e7ba66c7f9ddb065a3d71c298e0")
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
-    DB_URI = os.environ.get("DATABASE_URL")
+    DB_URI = os.environ.get("DATABASE_URL", "postgresql://levi:levi@localhost/levibot")
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     BAN_STICKER = bool(os.environ.get("BAN_STICKER", True))
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
@@ -71,14 +71,14 @@ if ENV:
     MESSAGE_DUMP = os.environ.get("MESSAGE_DUMP", None)
     DB_NAME = os.environ.get("DB_NAME", "MikoDB")
     LOAD = os.environ.get("LOAD", "").split()
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI")
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://ChauhanSaarthi:<db_password>@cluster0.ip0hi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
-    SUPPORT_ID = int(os.environ.get("SUPPORT_ID", "-100"))  # Support group id
+    SUPPORT_ID = int(os.environ.get("SUPPORT_ID", "-1002180149684"))  # Support group id
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "Ecstasy_Realm")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    TOKEN = os.environ.get("TOKEN", None)
-
+    TOKEN = os.environ.get("TOKEN", "7541400586:AAH8qRGAde61VLwFl-7Nn9VlRXOGfLoG83c")
+    
     # Read and validate integer variables
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
